@@ -1,0 +1,11 @@
+<h1>Create a bookmark</h1>
+<div class="container">
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :content %>
+  <%= f.submit class:"btn btn-primary" %>
+<% end %>
+</div>
+
+<div>
+  <%= link_to "Back to bookmarks", new_list_bookmark_path %>
+</div>
