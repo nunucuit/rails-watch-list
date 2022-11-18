@@ -15,11 +15,11 @@
       <div class="co-12 col-sm-6 col-md-4 mb-3">
         <%= link_to list_path(list), class:"text-decoration-none" do %>
             <%= list.name %>
+            <% if list.photo.attached? %>
+            <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
+            <% end %>
           </div>
         <% end %>
-        <%= cl_image_tag("cld-sample-5",
-      width: 400, height: 300, crop: :fill) %>
-      </div>
     <% end %>
   </div>
 </div>
